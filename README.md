@@ -141,9 +141,6 @@ A simple web-based task management application that allows users to manage tasks
 
 If you'd like to contribute to this project, feel free to fork the repository and submit pull requests. Please ensure that your code adheres to the existing style and includes tests.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
