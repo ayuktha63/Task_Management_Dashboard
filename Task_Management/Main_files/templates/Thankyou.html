@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Task Details</title>
+        <link rel="stylesheet" href="{% static 'css/Task.css' %}">
+        <script src="{% static 'js/script.js' %}"></script>
+    </head>
+    <body>
+        <script>
+            var home_url = "{% url 'home'  %}";
+            var task_url= "{% url 'task' %}";
+            var add_task_url = "{%url 'add_task' %}";
+            var task_details_url = "{%url 'task_details' %}";
+        </script>
+        <header>
+            <ul class="header">
+                <li class="header"><button onclick="home()">Home</button></li> 
+                <li class="header"><button onclick="add_task()">Add Task</button></li>
+                <li class="header"><button onclick="task_details()">Task Details</button></li>
+            </ul>
+        </header>
+
+        <div class="container">
+            <h1>Thank You for Your Submission!</h1>
+            <p>Your task has been successfully added. We appreciate your contribution to the task management system.</p>
+            <p><a href="{% url 'home' %}">Go back to the homepage</a></p>
+        </div>
+        <footer>
+            <p>&copy; 2024 Ayuktha. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

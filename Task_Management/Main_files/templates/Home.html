@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head> 
+        <title>Task Management Dashboard</title>
+        <link rel="stylesheet" href="{% static 'css/Homes.css' %}"> 
+        <script src="{% static 'js/script.js' %}"></script>
+    </head>
+    <body>
+        <script>
+            var home_url = "{% url 'home' %}";
+            var task_url = "{% url 'task' %}";
+            var add_task_url = "{% url 'add_task' %}";
+            var task_details_url = "{% url 'task_details' %}";
+        </script>
+        <header>
+            <ul class="header">
+                <li class="header"><button onclick="window.location.href=task_url">Task</button></li> 
+                <li class="header"><button onclick="window.location.href=add_task_url">Add Task</button></li>
+                <li class="header"><button onclick="window.location.href=task_details_url">Task Details</button></li>
+            </ul>
+        </header>
+        <div class="container">
+            <h1>Task Management Dashboard</h1>
+            <p class="main_para_content"><strong>The Task Management App is a simple and efficient platform designed to help users manage their daily tasks effectively. It allows users to:
+                <ul>
+                    <li id="point">View Tasks: See all tasks in a well-organized list with their current status (completed or pending).</li>
+                    <li id="point">Add Tasks: Easily add new tasks through a user-friendly form.</li>
+                    <li id="point">Update Status: Mark tasks as completed with a single click.</li>
+                    <li id="point">Delete Tasks: Remove tasks that are no longer needed (optional).</li>
+                </ul></strong> 
+            </p>
+        </div>
+        <div class="Task_display">
+            <h1>Task Display</h1> <!-- Task Display -->
+            
+            <!-- Create table for task list -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Status</th>
+                        <th>Priority</th>
+                        <th>Due Date</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop through tasks and display each task in a table row -->
+                    {% for task in tasks %}
+                        <tr>
+                            <td>{{ task.name }}</td>
+                            <td>{{ task.status }}</td>
+                            <td>{{ task.priority }}</td>
+                            <td>{{ task.due_date }}</td>
+                            <td>{{ task.description }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="5">No tasks available.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <p>&copy; 2024 Ayuktha. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

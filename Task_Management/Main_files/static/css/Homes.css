@@ -1,0 +1,95 @@
+html,body{
+    margin: 0px;
+    background-color: white;
+    background-image: url('https://imgs.search.brave.com/_D9UNEBAEDZfj1fm70wiQJ16mSFhtB-4q8MLd1acFYQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS85Ni81/OC9jSkRyYlIuanBn');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    background-color: rgb(100, 100, 100);
+    height: 70px;
+}
+ul.header{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    gap:20px;
+    margin-top: 0px;
+    
+}
+li.header{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+button{
+    padding: 10px 20px;
+    background-color: rgb(220, 220, 220);
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: rgb(180, 190, 190); /* Darker shade for hover */
+    border-radius: 10px;
+} 
+h1{
+    text-align: center;
+    flex-direction: column;
+}
+.main_para_content,#point{
+    margin-left: 200px;
+}
+.container{
+    margin-top: 30px;
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+}
+footer{
+    /* margin-top: 370px; */
+    background-color: rgb(30, 30, 30);
+    color:white;
+    text-align: center;
+    padding: 10px 0;
+}
+.Task_display{
+    height: 330px;
+    margin-top: 20px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    padding-top: 1px;
+}
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  /* Table headers */
+  th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Table cells */
+  td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  /* Table row hover effect */
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Table border */
+  table, th, td {
+    border: 1px solid #ddd;
+  }
